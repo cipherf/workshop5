@@ -4,12 +4,14 @@ import java.util.Objects;
 
 public class Contact {
     private final String name, phoneNumber, address;
+    private final int age;
 
 
-    public Contact(String name, String phoneNumber, String address) {
+    public Contact(String name, String phoneNumber, String address, int age) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.address = address;
+        this.age = age;
     }
 
     public String getName() {
@@ -22,6 +24,10 @@ public class Contact {
 
     public String getAddress() {
         return address;
+    }
+
+    public int getAge(){
+        return age;
     }
 
 

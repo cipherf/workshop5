@@ -22,6 +22,7 @@ public class Main {
         boolean isAddedCust = phonebook.addContact(custName, custPhone, custAddr, custAge);
 
 
+
         System.out.println("added all contacts");
 
 

@@ -16,19 +16,19 @@ public class Phonebook {
 
     public boolean addContact(String name,  String phoneNumber, String address,int age){
         Contact newContact = new Contact(name, phoneNumber, address, age);
-        ArrayList<Contact> contacts = new ArrayList<>(contactHashMap.values());
-        if (contacts.contains(newContact) ){
+        //ArrayList<Contact> contacts = new ArrayList<>(contactHashMap.values());
+        if (contactHashMap.containsValue(newContact)){
             return false;
         }
         contactHashMap.put(name, newContact);
-        numberOfContacts++;
+        numberOfContacts ++;
         return true;
     }
 
     public void printContacts(){
-        ArrayList<Contact> contacts = new ArrayList<>(contactHashMap.values());
+        //ArrayList<Contact> contacts = new ArrayList<>(contactHashMap.values());
         System.out.println("\nprinting contacts:");
-        for(Contact el : contacts){
+        for(Contact el : contactHashMap.values()){
 
             System.out.println(el);
             System.out.print("--------------------------------------------------------------\n");
@@ -40,12 +40,12 @@ public class Phonebook {
     }
 
     public int getAvgAge(){
-        ArrayList<Contact> contacts = new ArrayList<>(contactHashMap.values());
-        double sum = 0.00001;
-        for(Contact el : contacts){
+        //ArrayList<Contact> contacts = new ArrayList<>(contactHashMap.values());
+        double sum = 0f;
+        for(Contact el : contactHashMap.values()){
             System.out.println(el);
             sum += el.getAge();
         }
-        return (int) Math.round(sum / contacts.size());
+        return (int) Math.round(sum / numberOfContacts);
     }
 }

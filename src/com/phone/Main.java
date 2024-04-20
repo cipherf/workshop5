@@ -19,7 +19,7 @@ public class Main {
         String newContactAddr = reader.nextLine();
         System.out.println("enter user age:");
         int newContactAge = Integer.parseInt(reader.nextLine().strip());
-        boolean isAddedCust = phonebook.addContact(newContactName, newContactPhone, newContactAddr, newContactAge);
+        phonebook.addContact(newContactName, newContactPhone, newContactAddr, newContactAge);
 
 
 
@@ -27,8 +27,8 @@ public class Main {
 
 
 
-        Contact mahdiCont = phonebook.getContact("mahdi");
-        Contact montezaCont = phonebook.getContact("morteza");
+        phonebook.getContact("mahdi");
+        phonebook.getContact("morteza");
 
         int avgAge = phonebook.getAvgAge();
         System.out.println("average age of contacts is: " + avgAge);

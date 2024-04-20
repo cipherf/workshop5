@@ -33,7 +33,7 @@ public class Contact {
 
     @Override
     public String toString(){
-        return "name: " + getName() + " | address: " + getAddress() + " | phone: " + getPhoneNumber() + "";
+        return "name: " + getName() + " | address: " + getAddress() + " | phone: " + getPhoneNumber();
     }
 
     @Override

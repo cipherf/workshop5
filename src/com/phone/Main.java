@@ -1,7 +1,7 @@
 package com.phone;
 
 import java.util.Scanner;
-
+//Elham pourYusefi 40231010
 public class Main {
     public static void main(String[] args) {
         Phonebook phonebook = new Phonebook();
@@ -21,11 +21,7 @@ public class Main {
         int custAge = Integer.parseInt(reader.nextLine().strip());
         boolean isAddedCust = phonebook.addContact(custName, custPhone, custAddr, custAge);
 
-
-
         System.out.println("added all contacts");
-
-
 
         Contact mahdiCont = phonebook.getContact("mahdi");
         Contact montezaCont = phonebook.getContact("morteza");

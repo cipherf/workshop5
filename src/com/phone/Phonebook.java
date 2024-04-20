@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 
 public class Phonebook {
-    private HashMap<String, Contact> contactHashMap;
+    private final HashMap<String, Contact> contactHashMap;
     private int numberOfContacts;
 
     Phonebook(){

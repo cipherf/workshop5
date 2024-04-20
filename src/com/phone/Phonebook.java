@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 
 public class Phonebook {
-    private HashMap<String, Contact> contactHashMap;
+    final private HashMap<String, Contact> contactHashMap;
     private int numberOfContacts;
 
     Phonebook(){
@@ -16,8 +16,7 @@ public class Phonebook {
 
     public boolean addContact(String name,  String phoneNumber, String address,int age){
         Contact newContact = new Contact(name, phoneNumber, address, age);
-        ArrayList<Contact> contacts = new ArrayList<>(contactHashMap.values());
-        if (contacts.contains(newContact) ){
+        if (contactHashMap.containsValue(newContact)){
             return false;
         }
         contactHashMap.put(name, newContact);
@@ -41,7 +40,7 @@ public class Phonebook {
 
     public int getAvgAge(){
         ArrayList<Contact> contacts = new ArrayList<>(contactHashMap.values());
-        double sum = 0.00001;
+        double sum = 0f;
         for(Contact el : contacts){
             System.out.println(el);
             sum += el.getAge();

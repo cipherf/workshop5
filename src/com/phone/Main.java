@@ -2,24 +2,26 @@ package com.phone;
 
 import java.util.Scanner;
 
+// amirhossein aghighi | 40231038
+
 public class Main {
     public static void main(String[] args) {
         Phonebook phonebook = new Phonebook();
-        boolean isAddedMahdi = phonebook.addContact("mahdi", "09011234567", "Tehran", 29);
-        boolean isAddedAmir =  phonebook.addContact("amir", "09021234567", "Tabriz", 22);
-        boolean isAddedPouya = phonebook.addContact("pouya", "09031234567", "Mashhad", 38);
+        phonebook.addContact("mahdi", "09011234567", "Tehran", 29);
+        phonebook.addContact("amir", "09021234567", "Tabriz", 22);
+        phonebook.addContact("pouya", "09031234567", "Mashhad", 38);
 
 
         Scanner reader = new Scanner(System.in);
         System.out.println("enter user name:");
-        String custName = reader.nextLine().strip();
+        String newContactName = reader.nextLine().strip();
         System.out.println("enter user phone:");
-        String custPhone = reader.nextLine().strip();
+        String newContactPhone = reader.nextLine().strip();
         System.out.println("enter user address:");
-        String custAddr = reader.nextLine();
+        String newContactAddr = reader.nextLine();
         System.out.println("enter user age:");
-        int custAge = Integer.parseInt(reader.nextLine().strip());
-        boolean isAddedCust = phonebook.addContact(custName, custPhone, custAddr, custAge);
+        int newContactAge = Integer.parseInt(reader.nextLine().strip());
+        phonebook.addContact(newContactName, newContactPhone, newContactAddr, newContactAge);
 
 
 
@@ -27,8 +29,8 @@ public class Main {
 
 
 
-        Contact mahdiCont = phonebook.getContact("mahdi");
-        Contact montezaCont = phonebook.getContact("morteza");
+        phonebook.getContact("mahdi");
+        phonebook.getContact("morteza");
 
         int avgAge = phonebook.getAvgAge();
         System.out.println("average age of contacts is: " + avgAge);

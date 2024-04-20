@@ -1,13 +1,13 @@
 package com.phone;
 
 import java.util.Scanner;
-
+//Arian Kheirandish 40231413
 public class Main {
     public static void main(String[] args) {
         Phonebook phonebook = new Phonebook();
-        boolean isAddedMahdi = phonebook.addContact("mahdi", "09011234567", "Tehran", 29);
-        boolean isAddedAmir =  phonebook.addContact("amir", "09021234567", "Tabriz", 22);
-        boolean isAddedPouya = phonebook.addContact("pouya", "09031234567", "Mashhad", 38);
+        /*boolean isAddedMahdi =*/ phonebook.addContact("mahdi", "09011234567", "Tehran", 29);
+        /*boolean isAddedAmir =*/  phonebook.addContact("amir", "09021234567", "Tabriz", 22);
+        /*boolean isAddedPouya =*/ phonebook.addContact("pouya", "09031234567", "Mashhad", 38);
 
 
         Scanner reader = new Scanner(System.in);
@@ -19,7 +19,7 @@ public class Main {
         String custAddr = reader.nextLine();
         System.out.println("enter user age:");
         int custAge = Integer.parseInt(reader.nextLine().strip());
-        boolean isAddedCust = phonebook.addContact(custName, custPhone, custAddr, custAge);
+        /*boolean isAddedCust =*/ phonebook.addContact(custName, custPhone, custAddr, custAge);
 
 
 
@@ -37,3 +37,4 @@ public class Main {
         phonebook.printContacts();
     }
 }
+

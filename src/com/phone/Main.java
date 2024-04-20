@@ -12,14 +12,14 @@ public class Main {
 
         Scanner reader = new Scanner(System.in);
         System.out.println("enter user name:");
-        String custName = reader.nextLine().strip();
+        String newContactName = reader.nextLine().strip();
         System.out.println("enter user phone:");
-        String custPhone = reader.nextLine().strip();
+        String newContactPhone = reader.nextLine().strip();
         System.out.println("enter user address:");
-        String custAddr = reader.nextLine();
+        String newContactAddr = reader.nextLine();
         System.out.println("enter user age:");
-        int custAge = Integer.parseInt(reader.nextLine().strip());
-        boolean isAddedCust = phonebook.addContact(custName, custPhone, custAddr, custAge);
+        int newContactAge = Integer.parseInt(reader.nextLine().strip());
+        boolean isAddedCust = phonebook.addContact(newContactName, newContactPhone, newContactAddr, newContactAge);
 
 
 

@@ -1,5 +1,7 @@
+<<<<<<< HEAD
 package com.phone;
 
+// this is bobs edit
 import java.util.Scanner;
 
 public class Main {
@@ -20,7 +22,6 @@ public class Main {
         System.out.println("enter user age:");
         int custAge = Integer.parseInt(reader.nextLine().strip());
         boolean isAddedCust = phonebook.addContact(custName, custPhone, custAddr, custAge);
-
 
 
         System.out.println("added all contacts");
